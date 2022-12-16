@@ -5,7 +5,7 @@ using DuckGame;
 
 namespace DisplayImages
 {
-    public class PythonAPI  // closed Project since it only works with Diagnostics, wich need the whole Python311 folder(300mb+) to function
+    public class PythonAPI  // closed Project since it only works with Diagnostics in the Game, wich need the whole Python311 folder(300mb+) to function
     {
         public static void SliceImageScript(string imageName, string path, string grid)
         {
