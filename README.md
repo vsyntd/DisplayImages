@@ -8,9 +8,9 @@
 + Compatible with DuckGameRebuilt.  
 ## Commands for DevConsole:
 1. ```bitmap <image name> <image pieces>```
-  + example: bitmap image 3  -> displays an (3x3) grid image
-2. ```resize <image name> <image size>```
-  + image sizes:
+    + example: ```bitmap image 3```  -> displays an (3x3) grid image
+3. ```resize <image name> <image size>```
+    + image sizes:
       + s = 32x32 pixel
       + b = 64x64 pixel
       + h = 96x96 pixel
@@ -19,4 +19,4 @@
 > [!NOTE]
 > when using dev console commands images have to be located inside the DisplayImages/ImageFiles/rawImages folder
 3. ```split <image name> <image grid> (optional)<image grid>```
-  + example: split image 3 -> splits image into a 3x3 grid
+  + example: ```split image 3``` -> splits image into a 3x3 grid
