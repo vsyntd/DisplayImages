@@ -153,6 +153,7 @@ namespace DisplayImages.source.UserInterface.DGR
                 DuckGame.DevConsole.RunCommand("bitmap " + DIWindow.GetImageName(textBox1.Text, textBox1.Text.Length - 1) + " 3");
             else
                 return;
+            //
 
             ChangeMode();
         }
@@ -171,8 +172,7 @@ namespace DisplayImages.source.UserInterface.DGR
         {
             BitImageUpdater.bitmapMode = !BitImageUpdater.bitmapMode;
 
-            displayMode.Text = BitImageUpdater.bitmapMode ? "ON" : "OFF";
-            displayMode.ForeColor = BitImageUpdater.bitmapMode ? Color.Green : Color.Red;
+            ChangeMode();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
