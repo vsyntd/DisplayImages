@@ -55,7 +55,6 @@ namespace DisplayImages.source.UserInterface.DGR
             this.splitButton = new System.Windows.Forms.Button();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.label2 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.dropDownMenu.SuspendLayout();
             this.dropDownMenu2.SuspendLayout();
@@ -229,19 +228,11 @@ namespace DisplayImages.source.UserInterface.DGR
             resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            resources.ApplyResources(this.panel1, "panel1");
-            this.panel1.Name = "panel1";
-            this.panel1.DragEnter += new System.Windows.Forms.DragEventHandler(this.panel1_DragEnter);
-            // 
             // DIMenu
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dropDownMenu2);
             this.Controls.Add(this.dropDownMenu);
@@ -292,6 +283,5 @@ namespace DisplayImages.source.UserInterface.DGR
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel1;
     }
 }

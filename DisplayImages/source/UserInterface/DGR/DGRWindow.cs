@@ -20,6 +20,13 @@ namespace DisplayImages.source.UserInterface.DGR
         public DIMenu()
         {
             InitializeComponent();
+
+            DisplayImages.OnModeChange += ChangeMode;
+        }
+        private void ChangeMode()
+        {
+            displayMode.Text = BitImageUpdater.bitmapMode ? "ON" : "OFF";
+            displayMode.ForeColor = BitImageUpdater.bitmapMode ? Color.Green : Color.Red;
         }
 
         #region Resize DropDownMenu
@@ -124,24 +131,40 @@ namespace DisplayImages.source.UserInterface.DGR
         {
             if (textBox1.Text != "" && textBox1.Text != "please choose a valid image !")
                 DuckGame.DevConsole.RunCommand("bitmap " + DIWindow.GetImageName(textBox1.Text, textBox1.Text.Length - 1) + " 1");
+            else
+                return;
+
+            ChangeMode();
         }
 
         private void bigButton_Click(object sender, EventArgs e)
         {
             if (textBox1.Text != "" && textBox1.Text != "please choose a valid image !")
                 DuckGame.DevConsole.RunCommand("bitmap " + DIWindow.GetImageName(textBox1.Text, textBox1.Text.Length - 1) + " 2");
+            else
+                return;
+
+            ChangeMode();
         }
 
         private void hugeButton_Click(object sender, EventArgs e)
         {
             if (textBox1.Text != "" && textBox1.Text != "please choose a valid image !")
-                DuckGame.DevConsole.RunCommand("bitmap " + DIWindow.GetImageName(textBox1.Text, textBox1.Text.Length - 1) + " 3"); 
+                DuckGame.DevConsole.RunCommand("bitmap " + DIWindow.GetImageName(textBox1.Text, textBox1.Text.Length - 1) + " 3");
+            else
+                return;
+
+            ChangeMode();
         }
 
         private void customButton_Click(object sender, EventArgs e)
         {
             if (textBox1.Text != "" && textBox1.Text != "please choose a valid image !")
-                DuckGame.DevConsole.RunCommand("bitmap " + DIWindow.GetImageName(textBox1.Text, textBox1.Text.Length - 1));  
+                DuckGame.DevConsole.RunCommand("bitmap " + DIWindow.GetImageName(textBox1.Text, textBox1.Text.Length - 1));
+            else
+                return;
+
+            ChangeMode();
         }
 
         private void OnOffSwitch_Click(object sender, EventArgs e)
@@ -221,11 +244,6 @@ namespace DisplayImages.source.UserInterface.DGR
         private void splitButton_Click(object sender, EventArgs e)
         {
             timer2.Start();
-        }
-
-        private void panel1_DragEnter(object sender, DragEventArgs e)
-        {
-
         }
     }
 }

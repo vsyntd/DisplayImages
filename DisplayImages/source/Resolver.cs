@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DisplayImages;
 
-namespace BetterCommunication
+namespace DisplayImages
 {
     public static class Resolver
     {
@@ -49,7 +49,7 @@ namespace BetterCommunication
 
             }
             //string path2 = Mod.GetPath<Translator>("/files/" + assemblyShortName + ".exe");
-            string path1 = Mod.GetPath<DisplayImages.DisplayImages>(assemblyShortName + ".dll");
+            string path1 = Mod.GetPath<DisplayImages>(assemblyShortName + ".dll");
 
             Assembly loadedAssembly = null;
 

@@ -6,7 +6,6 @@ using DuckGame;
 using Microsoft.Xna.Framework;
 using System.IO;
 using HarmonyLib;
-using BetterCommunication;
 using DisplayImages.source.UserInterface;
 using System.Threading.Tasks;
 using System.Threading;
