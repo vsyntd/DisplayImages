@@ -17,6 +17,6 @@
       + leave blank in order to resize the image automatically to the next possible 32x32 grid
       + p = custom size. Example: resize image p 300 300  -> resizes 'image' to the specified width and height.
 > [!NOTE]
-> when using dev console commands images have to be located inside the DisplayImages/ImageFiles/rawImages folder
+> when using dev console commands, images have to be located inside the DisplayImages/ImageFiles/rawImages folder
 3. ```split <image name> <image grid> (optional)<image grid>```
   + example: ```split image 3``` -> splits image into a 3x3 grid
