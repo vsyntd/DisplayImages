@@ -3,7 +3,7 @@
 + Integrated UI - press F7 to open the menu.
 + If you want to compile the .dll from source you need to create the missing folders
     1. inside DisplayImages create the 'ImageFiles' folder
-    2. inside ImageFiles create the following empty folders: 'CustomSize', 'rawImages', '1', '4', '9', '64x', '96x'
+    1. inside ImageFiles create the following empty folders: 'CustomSize', 'rawImages', '1', '4', '9', '64x', '96x'
        
 + Compatible with DuckGameRebuilt.  
 ## Commands for DevConsole:
@@ -19,4 +19,4 @@
 > [!NOTE]
 > when using dev console commands, images have to be located inside the DisplayImages/ImageFiles/rawImages folder
 3. ```split <image name> <image grid> (optional)<image grid>```
-  + example: ```split image 3``` -> splits image into a 3x3 grid
+    + example: ```split image 3``` -> splits image into a 3x3 grid
