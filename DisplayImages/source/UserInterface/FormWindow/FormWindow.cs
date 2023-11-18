@@ -10,7 +10,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DisplayImages.source.UserInterface.DGR
+namespace DisplayImages.source.UserInterface.FormWindow
 {
     public partial class DIMenu : Form
     {

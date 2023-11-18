@@ -26,7 +26,8 @@ namespace DisplayImages.source.UserInterface
     }
 
     public class DIWindow
-    {      
+    {
+        #region Assignments
         const int WS_OVERLAPPED = 0x00000000;
         const int WS_SYSMENU = 0x00080000;
         const int WS_CAPTION = 0x00C00000;
@@ -44,6 +45,7 @@ namespace DisplayImages.source.UserInterface
         const int ICON_SMALL = 0;
         const int ICON_BIG = 1;
         const int WS_EX_ACCEPTFILES = 0x00000010;
+        #endregion
 
         public static int x = 300;
         public static int y = 300;
@@ -72,6 +74,7 @@ namespace DisplayImages.source.UserInterface
             IntPtr lpParam
         );
 
+        #region DLL Imports
         [DllImport("user32.dll")]
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
 
@@ -110,6 +113,7 @@ namespace DisplayImages.source.UserInterface
 
         [DllImport("user32.dll", SetLastError = true)]
         static extern IntPtr GetWindowLongPtr(IntPtr hWnd, int nIndex);
+        #endregion
 
         public static string filePath = "";
 
@@ -135,9 +139,9 @@ namespace DisplayImages.source.UserInterface
         [STAThread]
         public unsafe static void Entry()
         {
-            if (DuckGame.Content.path.Contains("DuckGameRebuilt"))
+            if (DuckGame.Content.path.Contains("DuckGameRebuilt") || OSVersion.Check())
             {
-                Application.Run(new DGR.DIMenu());
+                Application.Run(new FormWindow.DIMenu());
                 return;
             }
 

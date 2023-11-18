@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DisplayImages.source.UserInterface.DGR
+namespace DisplayImages.source.UserInterface.FormWindow
 {
     partial class DIMenu
     {
